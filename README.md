@@ -83,6 +83,9 @@ The following packages are crucial for the YOLO-Train-Data-Generator:
 - Java Development Kit
 - JavaFX
 
+## Paper
+The paper for this work can be found in this repository.
+
 ## Authors
 * **Yannick Knapp** (Yannick.Knapp@hs-weingarten.de)
 * **Yannick Richter** (Yannick.Richter@hs-weingarten.de)
