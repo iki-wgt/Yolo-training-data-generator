@@ -1,0 +1,127 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.scroll-pane {
+    -fx-background-color: #38BE9D77;
+     -fx-background-color: lightgray;
+    
+}
+.scroll-pane .viewport{
+    -fx-background-color: #DFE1E0;
+    
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:white;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 0em;
+    -fx-background-radius: 0em;
+}
+
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: lightgray;
+    -fx-background-radius: 0em;
+    -fx-border-width: 0em;
+    -fx-background-color: #58C4C3;
+    /*
+    -fx-background-color: linear-gradient(#1A3429, #546C61);
+    -fx-background-image: url("/Images/Button16.jpg");
+    * */
+}
+.scroll-bar:vertical .thumb {
+    -fx-background-color: lightgray;
+    -fx-background-radius: 0em;
+    -fx-border-width: 0em;
+     -fx-background-color: #58C4C3;
+    /*
+    -fx-background-color: linear-gradient(#1A3429, #546C61);
+    -fx-background-image: url("/Images/Button16_rot.jpg");
+    */
+    
+    
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: white;
+}
+
+
+
+
+.increment-button ,
+.decrement-button {
+    -fx-background-radius: 1em;
+    -fx-border-color: lightgray;
+    -fx-padding:6;
+
+}
+
+
+
+
+
+
+
+/*
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#399B85, #0F2F2F);
+    -fx-background-radius: 5;
+    -fx-border-color: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#005058, #00a2b1);
+	-fx-background-color: linear-gradient(#43bdc9, #2e5b62);
+	-fx-background-color: linear-gradient(#59aac5, #2e5b62);
+	-fx-background-color: linear-gradient(#59aac5, #000000);
+	-fx-background-radius: 0;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:pressed {
+	-fx-background-color: linear-gradient(#2A5058, #61a2b1);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+   
+}
+* 
+* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.split-pane:horizontal > .split-pane-divider {
+   -fx-background-color: #9CEAD3;
+}
+.split-pane:vertical > .split-pane-divider {
+   -fx-background-color: #9CEAD3;
+}
+.split-pane-divider {
+  -fx-padding: 2 ;
+}
+
+

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minWidth="602.0" prefHeight="768.0" prefWidth="718.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contr_hauptmenue">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menu_new" text="New" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#menu_open" text="Open" />
+                        <MenuItem fx:id="menuitem_save" disable="true" mnemonicParsing="false" onAction="#menu_save" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#menu_save_as" text="Save as" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#menu_open_setting" text="Open settings" />
+                        <MenuItem fx:id="menuitem_save_setting" disable="true" mnemonicParsing="false" onAction="#menu_save_settings" text="Save settings" />
+                        <MenuItem mnemonicParsing="false" onAction="#menu_save_settings_as" text="Save settings as" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" onAction="#menu_close" text="Close" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="View">
+                    <items>
+                        <CheckMenuItem fx:id="item_one_window" mnemonicParsing="false" onAction="#act_item_one_window" selected="true" text="Enable single window" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#menu_info" text="Info" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <SplitPane fx:id="split" layoutX="191.0" layoutY="155.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="600.0" prefHeight="160.0" prefWidth="850.0" style="-fx-background-color: white;">
+                     <children>
+                        <VBox layoutX="-440.0" layoutY="-295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <fx:include fx:id="ctr_Voreinstellungen" source="Voreinstellungen.fxml" />
+                              <VBox layoutX="28.0" layoutY="22.0" maxHeight="1.7976931348623157E308" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Separator layoutX="84.0" layoutY="371.0" prefWidth="200.0" />
+                                    <VBox maxHeight="1.7976931348623157E308" spacing="5.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                             <children>
+                                                <Label layoutX="28.0" layoutY="495.0" text="Add filter compositions" textFill="#49b972">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button minHeight="30.0" mnemonicParsing="false" onAction="#act_button_add" text="Add new composition" textFill="#4a2200">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <ScrollPane fx:id="scroll2" hbarPolicy="NEVER" layoutX="28.0" layoutY="522.0" maxHeight="1.7976931348623157E308" prefWidth="388.0" style="-fx-border-color: linear-gradient(#61a2b1, #2A5058); -fx-border-width: 4;" VBox.vgrow="ALWAYS">
+                                             <content>
+                                                <VBox fx:id="layout2" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" />
+                                             </content>
+                                          </ScrollPane>
+                                          <HBox alignment="CENTER_LEFT" layoutX="28.0" layoutY="735.0" prefHeight="25.0" prefWidth="398.0" spacing="10.0">
+                                             <children>
+                                                <Label layoutX="410.0" layoutY="650.0" text="Total number of compositions" />
+                                                <Label fx:id="label_gesamt" layoutX="594.0" layoutY="650.0" text="0" />
+                                                <HBox alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Button layoutX="671.0" layoutY="646.0" minHeight="45.0" mnemonicParsing="false" onAction="#act_button_generate" prefHeight="45.0" text="Generate Images" textFill="#5b9e6a">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

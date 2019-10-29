@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefWidth="547.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Filtereinstellungen.contr_overlay">
+   <children>
+      <VBox layoutX="140.0" layoutY="186.0" prefWidth="100.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <RadioButton fx:id="radio_obj" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" selected="true" text="Apply only to object">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radio_back" layoutX="14.0" layoutY="50.0" mnemonicParsing="false" text="Apply only to background" toggleGroup="$group" />
+                  <RadioButton fx:id="radio_both" layoutX="14.0" layoutY="81.0" mnemonicParsing="false" text="Apply to both" toggleGroup="$group" />
+               </children>
+            </VBox>
+            <Separator prefWidth="200.0" />
+            <VBox spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="Select overlay filter:" />
+                        <ComboBox fx:id="combo_filter" onAction="#act_combo_filter" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label text="Intensity" />
+                           </children>
+                        </VBox>
+                        <Slider fx:id="slider_alpha" showTickLabels="true" showTickMarks="true" value="100.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </Slider>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <TextField fx:id="txt_alpha" prefWidth="42.0" text="100" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label text="\%">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator prefWidth="200.0" />
+            <VBox spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" minHeight="25.0" spacing="10.0">
+                     <children>
+                        <RadioButton fx:id="radio_folderbac" mnemonicParsing="false" onAction="#act_radio_folderbac" selected="true" text="Random overlay image from folder">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="group2" />
+                           </toggleGroup>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="layout_folder" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#act_button_folder" text="Search folder" />
+                        <Button fx:id="button_folder_open" mnemonicParsing="false" onAction="#act_button_folder_open" text="Open" />
+                        <TextField fx:id="txt_folder" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="48.0" minHeight="25.0" spacing="10.0">
+                     <children>
+                        <RadioButton fx:id="radio_fixedimg" mnemonicParsing="false" onAction="#act_radio_fixedimg" text="Fix overlay image" toggleGroup="$group2" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="layout_image" spacing="5.0">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Button layoutX="263.0" layoutY="48.0" mnemonicParsing="false" onAction="#act_button_image" text="Search image" />
+                              <Button fx:id="button_image_open" mnemonicParsing="false" onAction="#act_button_image_open" text="Open" />
+                              <TextField fx:id="txt_img" editable="false" layoutX="351.0" layoutY="48.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: lightgray; -fx-border-color: #00AEAD;" VBox.vgrow="NEVER">
+                           <children>
+                              <ImageView fx:id="image" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

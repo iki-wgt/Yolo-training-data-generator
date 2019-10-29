@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="293.0" prefWidth="557.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contr_Progress">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="-24.0" layoutY="34.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="headline" layoutX="76.0" layoutY="34.0" text="Images get generated">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="please_wait" layoutX="114.0" layoutY="59.0" text="Please wait..." />
+            <ImageView fx:id="img" fitHeight="146.0" fitWidth="268.0" layoutX="-24.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox alignment="CENTER" layoutX="113.0" layoutY="151.0" spacing="5.0">
+               <children>
+                  <Label layoutX="113.0" layoutY="159.0" text="Image" />
+                  <Label fx:id="txt_number" layoutX="161.0" layoutY="159.0" text="10">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="184.0" layoutY="151.0" text="of" />
+                  <Label fx:id="txt_size" layoutX="229.0" layoutY="151.0" text="100">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="label_time" alignment="CENTER" layoutX="62.0" layoutY="185.0" spacing="5.0">
+               <children>
+                  <Label layoutX="62.0" layoutY="185.0" text="Estimated duration" textFill="#59bfab">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txt_time" layoutX="181.0" layoutY="185.0" text="30 sec" textFill="#06a485">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ProgressBar fx:id="progress" maxWidth="1.7976931348623157E308" minHeight="25.0" minWidth="-Infinity" progress="0.24" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </ProgressBar>
+            <HBox alignment="TOP_RIGHT" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#act_button_open" text="Open output folder" />
+                  <Button fx:id="button_abr" layoutX="157.0" layoutY="225.0" mnemonicParsing="false" onAction="#act_button_abr" text="  Abort  " />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

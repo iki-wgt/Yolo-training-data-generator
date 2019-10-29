@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefWidth="833.0" style="-fx-background-color: linear-gradient(#61a2b1, #2A5058);" stylesheets="@/scroll_pane.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contr_filterFrame">
+   <children>
+      <AnchorPane onMouseReleased="#mouse_pane_root" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="layout2" spacing="5.0" style="-fx-background-color: #F4F4F4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="23.0" layoutY="10.0" spacing="5.0">
+                     <children>
+                        <Label layoutX="23.0" layoutY="14.0" text="Amount" />
+                        <Label fx:id="label_imgsize" layoutX="97.0" layoutY="14.0" text="0">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin></Label>
+                        <Label layoutX="114.0" layoutY="14.0" text="x" />
+                        <TextField fx:id="txt_value" alignment="CENTER" layoutX="152.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#key_txt_value" prefHeight="25.0" prefWidth="50.0" text="1" />
+                        <Label fx:id="label_summe" layoutX="242.0" layoutY="14.0" text="(0 Pictures)">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="354.0" layoutY="10.0" text="   Max. objects per image" />
+						<TextField fx:id="obj_per_img" alignment="CENTER" editable="true" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#key_obj_per_img" prefHeight="25.0" prefWidth="42.0" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="txt_bezeichnung" layoutX="354.0" layoutY="10.0" maxWidth="600.0" promptText="Optional description" HBox.hgrow="ALWAYS" />
+                        <HBox alignment="TOP_RIGHT" spacing="5.0" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#act_button_del" text="Delete" />
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets right="-3.0" />
+                                 </HBox.margin>
+                              </Separator>
+                              <Button mnemonicParsing="false" onAction="#act_button_duplicate" text="Duplicate" />
+                              <Button mnemonicParsing="false" onAction="#act_button_edit" text="Edit" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <ScrollPane fx:id="scroll" hbarPolicy="NEVER" layoutX="14.0" layoutY="44.0" prefHeight="87.0" prefWidth="495.0" vbarPolicy="NEVER">
+                     <content>
+                        <HBox fx:id="layout" prefHeight="50.0" prefWidth="50.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="4.0" right="2.0" />
+   </padding>
+</AnchorPane>

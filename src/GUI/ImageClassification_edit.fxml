@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="124.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contr_ImageClassification_edit">
+   <children>
+      <VBox layoutX="-14.0" layoutY="26.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="-14.0" layoutY="26.0" spacing="10.0" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="26.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="layout_class" layoutX="14.0" layoutY="31.0" spacing="3.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="31.0" text="Class" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="120.0" layoutY="22.0" maxWidth="1.7976931348623157E308" spacing="3.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label layoutX="120.0" layoutY="22.0" text="Class name" />
+                        <TextField fx:id="txt_name" layoutX="120.0" layoutY="55.0" maxHeight="30.0" maxWidth="1.7976931348623157E308" minHeight="30.0" prefHeight="30.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" layoutX="225.0" layoutY="89.0" spacing="10.0">
+               <children>
+                  <Button layoutX="225.0" layoutY="89.0" mnemonicParsing="false" onAction="#act_button_close" text="Abort" />
+                  <Button layoutX="299.0" layoutY="89.0" mnemonicParsing="false" onAction="#act_button_save" text="Save" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>

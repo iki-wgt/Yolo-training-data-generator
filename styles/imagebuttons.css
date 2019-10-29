@@ -1,0 +1,242 @@
+.img_move  {
+	-fx-background-image: url("translate.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_background  {
+	-fx-background-image: url("background.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_bloom  {
+	-fx-background-image: url("blur.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_helligkeit  {
+	-fx-background-image: url("brightness.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_move_out  {
+	-fx-background-image: url("clip.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_nois  {
+	-fx-background-image: url("noise.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_scale {
+	-fx-background-image: url("scale.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_deckung {
+	-fx-background-image: url("overlap.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_rot  {
+	-fx-background-image: url("rotate.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_farbton  {
+	-fx-background-image: url("hue.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_contrast  {
+	-fx-background-image: url("contrast.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_overlay  {
+	-fx-background-image: url("overlay.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_saturation  {
+	-fx-background-image: url("saturation.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_gamma  {
+	-fx-background-image: url("gamma.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_value {
+	-fx-background-image: url("value.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_object {
+	-fx-background-image: url("object.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_resolution {
+	-fx-background-image: url("resolution.png");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+.img_load {
+	-fx-background-image: url("loading.jpg");
+	-fx-background-position: center;
+	-fx-background-repeat: none;
+	-fx-background-size: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.scroll-pane {
+    -fx-background-color: #38BE9D77;
+     -fx-background-color: lightgray;
+    
+}
+.scroll-pane .viewport{
+    -fx-background-color: #DFE1E0;
+    
+}
+*/
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:white;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 0em;
+    -fx-background-radius: 0em;
+}
+
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: lightgray;
+    -fx-background-radius: 0em;
+    -fx-border-width: 0em;
+    -fx-background-color: #58C4C3;
+    /*
+    -fx-background-color: linear-gradient(#1A3429, #546C61);
+    -fx-background-image: url("/Images/Button16.jpg");
+    * */
+}
+.scroll-bar:vertical .thumb {
+    -fx-background-color: lightgray;
+    -fx-background-radius: 0em;
+    -fx-border-width: 0em;
+     -fx-background-color: #58C4C3;
+    /*
+    -fx-background-color: linear-gradient(#1A3429, #546C61);
+    -fx-background-image: url("/Images/Button16_rot.jpg");
+    */
+    
+    
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: white;
+}
+
+
+
+
+.increment-button ,
+.decrement-button {
+    -fx-background-radius: 1em;
+    -fx-border-color: lightgray;
+    -fx-padding:6;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scroll-pane .viewport{
+    -fx-background-color: white;
+}
+
+
+.split-pane:horizontal > .split-pane-divider {
+   -fx-background-color: #9CEAD3;
+}
+.split-pane:vertical > .split-pane-divider {
+   -fx-background-color: #9CEAD3;
+}
+.split-pane-divider {
+  -fx-padding: 2 ;
+}
+
+.split-pane
+{
+    -fx-padding: 0;
+}

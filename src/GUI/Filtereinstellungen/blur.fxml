@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefWidth="547.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Filtereinstellungen.contr_blur">
+   <children>
+      <VBox spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="38.0" layoutY="38.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <RadioButton fx:id="radio_obj" layoutX="38.0" layoutY="38.0" mnemonicParsing="false" selected="true" text="Apply only to object">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radio_back" layoutX="38.0" layoutY="76.0" mnemonicParsing="false" text="Apply only to background" toggleGroup="$group" />
+                  <RadioButton fx:id="radio_both" layoutX="38.0" layoutY="116.0" mnemonicParsing="false" text="Apply to both" toggleGroup="$group" />
+               </children>
+            </VBox>
+            <Separator prefWidth="200.0" />
+            <VBox layoutX="29.0" layoutY="134.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="radio_range" layoutX="19.0" layoutY="124.0" mnemonicParsing="false" onAction="#act_radio_range" selected="true" text="Random blur range">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group2" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <GridPane fx:id="grid_range" hgap="10.0" layoutX="51.0" layoutY="161.0" vgap="5.0">
+                     <children>
+                        <Label text="from" />
+                        <Slider fx:id="slider_from" blockIncrement="1.0" max="50.0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" />
+                        <TextField fx:id="txt_to" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="50" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label text="\%" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_from" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="0" GridPane.columnIndex="2" />
+                        <Label text="\%" GridPane.columnIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="to" GridPane.rowIndex="1" />
+                        <Slider fx:id="slider_to" blockIncrement="1.0" showTickLabels="true" showTickMarks="true" value="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <rowConstraints>
+                        <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox layoutX="28.0" layoutY="246.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="radio_fix" layoutX="8.0" layoutY="226.0" mnemonicParsing="false" onAction="#act_radio_fix" text="Fixed blur" toggleGroup="$group2" />
+                  <GridPane fx:id="grid_fix" hgap="10.0" layoutX="68.0" layoutY="272.0" vgap="5.0">
+                     <children>
+                        <Label text="fix" />
+                        <Slider fx:id="slider_fix" blockIncrement="1.0" showTickLabels="true" showTickMarks="true" value="25.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="txt_fix" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="25" GridPane.columnIndex="2" />
+                        <Label text="\%" GridPane.columnIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <rowConstraints>
+                        <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

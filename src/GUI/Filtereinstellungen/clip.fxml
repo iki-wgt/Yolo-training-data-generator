@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefWidth="484.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Filtereinstellungen.contr_clip">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="72.0" layoutY="28.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox spacing="10.0">
+                     <children>
+                        <RadioButton fx:id="radio_clipX" mnemonicParsing="false" onAction="#act_radio_settings" selected="true" text="Clip only X-axis">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="group2" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="radio_clipY" mnemonicParsing="false" onAction="#act_radio_settings" text="Clip only Y-axis" toggleGroup="$group2" />
+                        <RadioButton fx:id="radio_clipXY" mnemonicParsing="false" onAction="#act_radio_settings" text="Clip on both axis" toggleGroup="$group2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <RadioButton fx:id="radio_range" layoutX="72.0" layoutY="28.0" mnemonicParsing="false" onAction="#act_radio_range" selected="true" text="Clip range">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <VBox fx:id="layout_range" spacing="10.0">
+                     <children>
+                        <GridPane fx:id="grid_range1" hgap="10.0" vgap="5.0">
+                           <children>
+                              <Label text="X from" />
+                              <Label text="\%" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="\%" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="X to" GridPane.rowIndex="1" />
+                              <Slider fx:id="slider_x_from" blockIncrement="1.0" min="-100.0" showTickLabels="true" showTickMarks="true" value="-100.0" GridPane.columnIndex="1" />
+                              <Slider fx:id="slider_x_to" blockIncrement="1.0" min="-100.0" showTickLabels="true" showTickMarks="true" value="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txt_x_from" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="-100" GridPane.columnIndex="2" />
+                              <TextField fx:id="txt_x_to" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="100" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" prefWidth="40.0" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <rowConstraints>
+                              <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <Separator fx:id="seperatior" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Separator>
+                        <GridPane fx:id="grid_range2" hgap="10.0" vgap="5.0">
+                           <children>
+                              <Label text="Y from" />
+                              <Label text="\%" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="\%" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Y to" GridPane.rowIndex="1" />
+                              <Slider fx:id="slider_y_from" blockIncrement="1.0" min="-100.0" showTickLabels="true" showTickMarks="true" value="-100.0" GridPane.columnIndex="1" />
+                              <Slider fx:id="slider_y_to" blockIncrement="1.0" min="-100.0" showTickLabels="true" showTickMarks="true" value="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txt_y_from" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="-100" GridPane.columnIndex="2" />
+                              <TextField fx:id="txt_y_to" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="100" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" prefWidth="40.0" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <rowConstraints>
+                              <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox layoutY="162.0" spacing="10.0" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <RadioButton fx:id="radio_fix" layoutY="162.0" mnemonicParsing="false" onAction="#act_radio_fix" text="Clip fixed position" toggleGroup="$group" />
+                  <VBox fx:id="layout_fix" spacing="5.0">
+                     <children>
+                        <GridPane fx:id="grid_fix1" hgap="10.0" layoutX="142.0" layoutY="190.0" vgap="5.0">
+                           <children>
+                              <Label text="X" />
+                              <Slider fx:id="slider_x_fix" blockIncrement="1.0" min="-100.0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" />
+                              <TextField fx:id="txt_x_fix" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="0" GridPane.columnIndex="2" />
+                              <Label text="\%" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" prefWidth="40.0" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <rowConstraints>
+                              <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane fx:id="grid_fix2" hgap="10.0" vgap="5.0">
+                           <children>
+                              <Label text="Y" />
+                              <Label text="\%" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Slider fx:id="slider_y_fix" blockIncrement="1.0" min="-100.0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" />
+                              <TextField fx:id="txt_y_fix" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="0" GridPane.columnIndex="2" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" prefWidth="40.0" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <rowConstraints>
+                              <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

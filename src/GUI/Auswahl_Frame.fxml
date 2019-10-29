@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" maxWidth="320.0" minHeight="300.0" minWidth="135.0" prefHeight="666.0" prefWidth="320.0" stylesheets="@/imagebuttons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contr_Auswahl_Frame">
+   <children>
+      <ScrollPane fx:id="scroll_filter" hbarPolicy="NEVER" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane fx:id="pane_style" minHeight="0.0" minWidth="0.0" style="-fx-background-color: white;">
+               <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="label_titel" text="Add filter" textFill="#566f83">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <FlowPane fx:id="layout" hgap="5.0" layoutX="-61.0" layoutY="-135.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox fx:id="button_move">
+                                 <children>
+                                    <Label fx:id="label1" layoutX="541.0" layoutY="122.0" text="translate" />
+                                    <Button layoutX="541.0" layoutY="149.0" mnemonicParsing="false" onAction="#act_button_move" prefHeight="100.0" prefWidth="100.0" styleClass="img_move" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_clip">
+                                 <children>
+                                    <Label fx:id="label2" layoutX="81.0" layoutY="215.0" text="clip" />
+                                    <Button layoutX="59.0" layoutY="233.0" mnemonicParsing="false" onAction="#act_button_move_out" prefHeight="100.0" prefWidth="100.0" styleClass="img_move_out" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_scale">
+                                 <children>
+                                    <Label fx:id="label3" layoutX="192.0" layoutY="356.0" text="scale" />
+                                    <Button layoutX="179.0" layoutY="384.0" mnemonicParsing="false" onAction="#act_button_scale" prefHeight="100.0" prefWidth="100.0" styleClass="img_scale" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_rotate">
+                                 <children>
+                                    <Label fx:id="label4" layoutX="311.0" layoutY="103.0" text="rotate" />
+                                    <Button layoutX="311.0" layoutY="129.0" mnemonicParsing="false" onAction="#act_button_rotate" prefHeight="100.0" prefWidth="100.0" styleClass="img_rot" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_noise">
+                                 <children>
+                                    <Label fx:id="label5" layoutX="48.0" layoutY="87.0" text="noise" />
+                                    <Button layoutX="21.0" layoutY="112.0" mnemonicParsing="false" onAction="#act_button_noise" prefHeight="100.0" prefWidth="100.0" styleClass="img_nois" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_blur">
+                                 <children>
+                                    <Label fx:id="label6" layoutX="598.0" layoutY="56.0" text="blur" />
+                                    <Button layoutX="562.0" layoutY="87.0" mnemonicParsing="false" onAction="#act_button_bloom" prefHeight="100.0" prefWidth="100.0" styleClass="img_bloom" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_hue">
+                                 <children>
+                                    <Label fx:id="label7" layoutX="337.0" layoutY="79.0" text="hue" />
+                                    <Button layoutX="337.0" layoutY="103.0" mnemonicParsing="false" onAction="#act_button_farbton" prefHeight="100.0" prefWidth="100.0" styleClass="img_farbton" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_saturation">
+                                 <children>
+                                    <Label fx:id="label8" layoutX="598.0" layoutY="56.0" text="saturation" />
+                                    <Button layoutX="562.0" layoutY="87.0" mnemonicParsing="false" onAction="#act_button_saturation" prefHeight="100.0" prefWidth="100.0" styleClass="img_saturation" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_value">
+                                 <children>
+                                    <Label fx:id="label9" layoutX="598.0" layoutY="56.0" text="value" />
+                                    <Button layoutX="562.0" layoutY="87.0" mnemonicParsing="false" onAction="#act_button_value" prefHeight="100.0" prefWidth="100.0" styleClass="img_value" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_brightnes">
+                                 <children>
+                                    <Label fx:id="label10" layoutX="195.0" layoutY="79.0" text="brightness" />
+                                    <Button layoutX="159.0" layoutY="104.0" mnemonicParsing="false" onAction="#act_button_helligkeit" prefHeight="100.0" prefWidth="100.0" styleClass="img_helligkeit" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_contrast">
+                                 <children>
+                                    <Label fx:id="label11" layoutX="598.0" layoutY="56.0" text="contrast" />
+                                    <Button layoutX="562.0" layoutY="87.0" mnemonicParsing="false" onAction="#act_button_contrast" prefHeight="100.0" prefWidth="100.0" styleClass="img_contrast" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_gamma">
+                                 <children>
+                                    <Label fx:id="label12" layoutX="598.0" layoutY="56.0" text="gamma" />
+                                    <Button layoutX="562.0" layoutY="87.0" mnemonicParsing="false" onAction="#act_button_gamma" prefHeight="100.0" prefWidth="100.0" styleClass="img_gamma" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_overlay">
+                                 <children>
+                                    <Label fx:id="label13" layoutX="494.0" layoutY="215.0" text="overlay" />
+                                    <Button layoutX="494.0" layoutY="239.0" mnemonicParsing="false" onAction="#act_button_overlay" prefHeight="100.0" prefWidth="100.0" styleClass="img_overlay" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_overlap">
+                                 <children>
+                                    <Label fx:id="label14" layoutX="394.0" layoutY="207.0" text="overlap" />
+                                    <Button layoutX="382.0" layoutY="233.0" mnemonicParsing="false" onAction="#act_button_ueberdeckung" prefHeight="100.0" prefWidth="100.0" styleClass="img_deckung" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_object">
+                                 <children>
+                                    <Label fx:id="label15" layoutX="394.0" layoutY="207.0" text="object" />
+                                    <Button layoutX="382.0" layoutY="233.0" mnemonicParsing="false" onAction="#act_button_object" prefHeight="100.0" prefWidth="100.0" styleClass="img_object" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="button_resolution">
+                                 <children>
+                                    <Label fx:id="label16" layoutX="394.0" layoutY="207.0" text="resolution" />
+                                    <Button layoutX="382.0" layoutY="233.0" mnemonicParsing="false" onAction="#act_button_resolution" prefHeight="100.0" prefWidth="100.0" styleClass="img_resolution" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </FlowPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

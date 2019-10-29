@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1000.0" stylesheets="@/imagebuttons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contr_Bearbeiten_Window">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane fx:id="split1" dividerPositions="0.6697341513292433" layoutX="138.0" layoutY="72.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <SplitPane fx:id="split2" dividerPositions="0.7418899858956276" layoutX="-22.0" layoutY="69.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane fx:id="pane_filterregeln" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                              <AnchorPane fx:id="pane_vorschau" maxHeight="231.0" minHeight="37.0" minWidth="50.0" prefHeight="231.0" prefWidth="200.0" SplitPane.resizableWithParent="false" />
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane maxWidth="320.0" minHeight="0.0" minWidth="135.0" prefHeight="711.0" prefWidth="320.0" SplitPane.resizableWithParent="false">
+                     <children>
+                        <SplitPane fx:id="split3" layoutX="108.0" layoutY="177.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane fx:id="pane_filter" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+            <HBox alignment="TOP_RIGHT" VBox.vgrow="NEVER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#act_button_close" text="Close window" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

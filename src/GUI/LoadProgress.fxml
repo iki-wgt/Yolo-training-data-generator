@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="152.0" prefWidth="401.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.contr_loadProgress">
+   <children>
+      <VBox layoutX="32.0" layoutY="29.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="32.0" layoutY="29.0">
+               <children>
+                  <Label layoutX="37.0" layoutY="29.0" text="Load Data" textFill="#ffc53b">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label_name" layoutX="32.0" layoutY="58.0" text="Filename" />
+               </children>
+            </VBox>
+            <VBox layoutX="56.0" layoutY="141.0" spacing="5.0">
+               <children>
+                  <Label layoutX="57.0" layoutY="141.0" text="Progress" textFill="#6d8d7b" />
+                  <ProgressBar fx:id="progress1" layoutX="56.0" layoutY="178.0" maxWidth="1.7976931348623157E308" progress="0.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <HBox alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button layoutX="307.0" layoutY="254.0" mnemonicParsing="false" onAction="#act_cancel" text="  Abort  " />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="231.0" minHeight="37.0" minWidth="50.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contr_Vorschau_Frame">
+   <children>
+      <VBox layoutX="10.0" layoutY="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="14.0" text="Preview" textFill="#7d5555">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <VBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label text="(minimum- average- and maximum-range)" textFill="#8d695c">
+                           <padding>
+                              <Insets top="8.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <HBox alignment="TOP_RIGHT" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#act_button_einstellungen" text="Preview settings" />
+                        <Button fx:id="button_generate" mnemonicParsing="false" onAction="#act_button_generate" text="Generate other samples" />
+                     </children>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="103.0" prefHeight="180.0" spacing="20.0" style="-fx-background-color: lightgrey;">
+               <children>
+                  <HBox maxWidth="1.7976931348623157E308" minWidth="0.0" HBox.hgrow="ALWAYS" />
+                  <VBox style="-fx-border-color: #5E2B02; -fx-border-width: 2;">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <ImageView fx:id="img1" fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="label1" text="minimum&#10;range" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ProgressIndicator fx:id="prog1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="120.0">
+                                 <StackPane.margin>
+                                    <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                 </StackPane.margin>
+                              </ProgressIndicator>
+                           </children>
+                        </StackPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <HBox maxWidth="1.7976931348623157E308" minWidth="0.0" HBox.hgrow="ALWAYS" />
+                  <VBox style="-fx-border-color: #5E2B02; -fx-border-width: 2;">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <ImageView fx:id="img2" fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="label2" text="average" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ProgressIndicator fx:id="prog2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="120.0">
+                                 <StackPane.margin>
+                                    <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                 </StackPane.margin>
+                              </ProgressIndicator>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <HBox maxWidth="1.7976931348623157E308" minWidth="0.0" HBox.hgrow="ALWAYS" />
+                  <VBox style="-fx-border-color: #5E2B02; -fx-border-width: 2;">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <ImageView fx:id="img3" fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="label3" text="maximum&#10;range" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ProgressIndicator fx:id="prog3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="120.0">
+                                 <StackPane.margin>
+                                    <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                 </StackPane.margin>
+                              </ProgressIndicator>
+                           </children>
+                        </StackPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <HBox maxWidth="1.7976931348623157E308" minWidth="0.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

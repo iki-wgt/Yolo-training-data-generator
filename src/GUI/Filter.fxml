@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="250.0" prefHeight="760.0" prefWidth="1000.0" stylesheets="@/imagebuttons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contr_filter">
+   <children>
+      <VBox maxWidth="1.7976931348623157E308" prefHeight="381.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox maxWidth="1.7976931348623157E308">
+               <children>
+                  <Label layoutX="24.0" layoutY="24.0" text="Compose filter rule" textFill="#7f6654">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fx:id="scroll_zusam" layoutX="32.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="108.0" style="-fx-border-color: #E9DDD7;" vbarPolicy="NEVER">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <HBox fx:id="layout_zusammenstellung" layoutX="-14.0" layoutY="43.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <VBox.margin>
+                        <Insets bottom="3.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+                  <HBox>
+                     <children>
+                        <VBox>
+                           <children>
+                              <VBox fx:id="layout_buttons">
+                                 <children>
+                                    <HBox maxWidth="-Infinity" minWidth="-Infinity" prefWidth="178.0" spacing="5.0">
+                                       <children>
+                                          <Button fx:id="button_entfernen" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#act_button_entfernen" text="Delete" HBox.hgrow="ALWAYS" />
+                                          <Separator orientation="VERTICAL" visible="false">
+                                             <padding>
+                                                <Insets left="3.0" />
+                                             </padding>
+                                          </Separator>
+                                          <Button maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#act_button_left" text="  &lt;&lt;  " visible="false" />
+                                          <Button maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#act_button_right" text="  &gt;&gt;  " visible="false" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="4.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="layout_obj1" alignment="BOTTOM_LEFT" spacing="3.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Separator prefWidth="178.0">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin></Separator>
+                                    <VBox maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label maxWidth="-Infinity" minWidth="-Infinity" text="Filter rule for object" textFill="#9c6a8d">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="-2.0" top="-2.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox fx:id="layout_buttons2" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="178.0" spacing="5.0">
+                                             <children>
+                                                <Button fx:id="button_delobj" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#act_button_delobj" text="Delete" HBox.hgrow="ALWAYS" />
+                                                <Separator orientation="VERTICAL" visible="false">
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </Separator>
+                                                <Button maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#act_button_left2" text="  &lt;&lt;  " visible="false" />
+                                                <Button maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#act_button_right2" text="  &gt;&gt;  " visible="false" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <ToggleButton fx:id="toggle_edit" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#act_toggle_edit" style="-fx-border-color: #98859e;" text="Edit object filter" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </ToggleButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="layout_obj2" layoutX="53.0" layoutY="275.0" maxWidth="1.7976931348623157E308" spacing="3.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox fx:id="layout_scrollcontent" disable="true" layoutX="53.0" layoutY="275.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <ScrollPane fx:id="scroll_filter" layoutX="53.0" layoutY="275.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="89.0" style="-fx-border-color: #E9DDD7;" vbarPolicy="NEVER" HBox.hgrow="ALWAYS">
+                                       <content>
+                                          <HBox fx:id="layout_filter" maxWidth="1.7976931348623157E308" minHeight="60.0" minWidth="60.0">
+                                             <padding>
+                                                <Insets left="3.0" top="1.0" />
+                                             </padding></HBox>
+                                       </content>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ScrollPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="Settings" textFill="#647d54">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fx:id="scroll_einstellungen" style="-fx-border-color: #E9DDD7;" VBox.vgrow="ALWAYS">
+                    <content>
+                      <AnchorPane fx:id="pane_einstellungen" minHeight="50.0" minWidth="50.0" />
+                    </content>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

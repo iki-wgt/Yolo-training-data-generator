@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefWidth="547.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Filtereinstellungen.contr_object">
+   <children>
+      <VBox spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <RadioButton fx:id="radio_range" layoutX="19.0" layoutY="124.0" mnemonicParsing="false" onAction="#act_radio_range" selected="true" text="Random object number range">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <GridPane fx:id="grid_range" hgap="10.0" layoutX="51.0" layoutY="161.0" maxWidth="1.7976931348623157E308" vgap="5.0">
+                     <children>
+                        <Label text="from" />
+                        <Slider fx:id="slider_from" blockIncrement="1.0" majorTickUnit="15.0" min="1.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="txt_to" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="5" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="txt_from" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="1" GridPane.columnIndex="2" />
+                        <Label text="to" GridPane.rowIndex="1" />
+                        <Slider fx:id="slider_to" blockIncrement="1.0" majorTickUnit="15.0" min="2.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <rowConstraints>
+                        <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <RadioButton fx:id="radio_fix" layoutX="8.0" layoutY="226.0" mnemonicParsing="false" onAction="#act_radio_fix" text="Fixed object number" toggleGroup="$group" />
+                  <GridPane fx:id="grid_fix" hgap="10.0" layoutX="68.0" layoutY="272.0" maxWidth="-Infinity" prefWidth="200.0" vgap="5.0">
+                     <children>
+                        <Label text="fix" />
+                        <Slider fx:id="slider_fix" blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="txt_fix" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="1" GridPane.columnIndex="2" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <rowConstraints>
+                        <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </VBox>
+            <Separator prefWidth="200.0" />
+            <VBox spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" minHeight="25.0" spacing="10.0">
+                     <children>
+                        <RadioButton fx:id="radio_folderbac" mnemonicParsing="false" onAction="#act_radio_folderbac" selected="true" text="Random object image from folder">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="group2" />
+                           </toggleGroup>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="layout_folder" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#act_button_folder" text="Search folder" />
+                        <Button fx:id="button_folder_open" mnemonicParsing="false" onAction="#act_button_folder_open" text="Open" />
+                        <TextField fx:id="txt_folder" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="48.0" minHeight="25.0" spacing="10.0">
+                     <children>
+                        <RadioButton fx:id="radio_fixedimg" mnemonicParsing="false" onAction="#act_radio_fixedimg" text="Fix object image" toggleGroup="$group2" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="layout_image" spacing="5.0">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Button layoutX="263.0" layoutY="48.0" mnemonicParsing="false" onAction="#act_button_image" text="Search image" />
+                              <Button fx:id="button_image_open" mnemonicParsing="false" onAction="#act_button_image_open" text="Open" />
+                              <TextField fx:id="txt_img" editable="false" layoutX="351.0" layoutY="48.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: lightgray; -fx-border-color: #00AEAD;" VBox.vgrow="NEVER">
+                           <children>
+                              <ImageView fx:id="image" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

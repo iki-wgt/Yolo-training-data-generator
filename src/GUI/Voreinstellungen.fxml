@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxWidth="1.7976931348623157E308" prefWidth="690.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contr_Voreinstellungen">
+   <children>
+      <VBox maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text="Default settings and paths" textFill="#49b972">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="image_hs" fitHeight="45.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <TitledPane>
+               <content>
+                  <VBox style="-fx-border-color: linear-gradient(#61a2b1, #2A5058); -fx-border-width: 3;">
+                     <children>
+                        <TabPane maxWidth="1.7976931348623157E308" prefHeight="250.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+                           <tabs>
+                              <Tab text="Output settings">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #F4F4F4;">
+                                       <children>
+                                          <VBox spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <VBox spacing="5.0">
+                                                   <children>
+                                                      <Label layoutX="542.0" layoutY="160.0" text="Image size" textFill="#bba279">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                                         <children>
+                                                            <Label text="Output size for generated images:" />
+                                                            <TextField fx:id="txt_pixel1" prefHeight="25.0" prefWidth="100.0" promptText="width" text="416" />
+                                                            <Label text="x" />
+                                                            <TextField fx:id="txt_pixel2" prefHeight="25.0" prefWidth="100.0" promptText="height" text="416" />
+                                                            <Label text="pixel" />
+                                                            <!--Label text="Set number of objects per generated image:" />
+                                                            <Slider fx:id="num_obj_per_img" blockIncrement="1.0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1"/>
+                                                         	<TextField fx:id="txt_num_obj_per_img" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="42.0" text="1" GridPane.columnIndex="2" GridPane.rowIndex="1" /-->
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <Separator prefWidth="200.0" />
+                                                <VBox spacing="10.0">
+                                                   <children>
+                                                      <VBox spacing="5.0">
+                                                         <children>
+                                                            <Label layoutX="28.0" layoutY="126.0" text="Output folder for generated images" textFill="#bba279">
+                                                               <font>
+                                                                  <Font name="System Bold" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <HBox layoutX="30.0" layoutY="143.0" spacing="10.0">
+                                                               <children>
+                                                                  <Button layoutX="30.0" layoutY="143.0" mnemonicParsing="false" onAction="#act_button_festlegen_output" text="Select folder" />
+                                                                  <Button fx:id="button_open_output" mnemonicParsing="false" onAction="#act_button_open_output" text="Open" />
+                                                                  <VBox HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <TextField fx:id="txt_output_path" editable="false" layoutX="145.0" layoutY="143.0" maxWidth="600.0" prefHeight="25.0" HBox.hgrow="ALWAYS" />
+                                                                        <HBox spacing="5.0">
+                                                                           <children>
+                                                                              <Label fx:id="txt_anz_out" text="0" textFill="#8da0a7" />
+                                                                              <Label text="images found" textFill="#8da0a7" />
+                                                                           </children>
+                                                                        </HBox>
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <Separator prefWidth="200.0" />
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Select yolo version" textFill="#bba279">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox fx:id="combo_version" prefWidth="150.0" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Object images">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="-141.0" layoutY="14.0" prefWidth="388.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" layoutX="33.0" layoutY="211.0" spacing="10.0">
+                                                   <children>
+                                                      <Label layoutX="33.0" layoutY="215.0" text="Set path for isolated images" textFill="#bba279">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <VBox VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox spacing="10.0">
+                                                         <children>
+                                                            <Button mnemonicParsing="false" onAction="#act_button_festlegen_frei" text="Select folder" />
+                                                            <Button fx:id="button_open_frei" mnemonicParsing="false" onAction="#act_button_open_frei" text="Open" />
+                                                            <VBox HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField fx:id="txt_path_frei" maxWidth="600.0" HBox.hgrow="ALWAYS" />
+                                                                  <HBox spacing="5.0">
+                                                                     <children>
+                                                                        <Label fx:id="txt_anz_frei" text="0" textFill="#8da0a7" />
+                                                                        <Label text="images found" textFill="#8da0a7" />
+                                                                     </children>
+                                                                  </HBox>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <GridPane hgap="10.0" vgap="2.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="56.0" minWidth="56.0" prefWidth="56.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="504.0" minWidth="10.0" prefWidth="494.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label text="Statistics:" textFill="#a1978c">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="classified:" textFill="#8da0a7" GridPane.rowIndex="1" />
+                                                            <Label text="not classified:" textFill="#8da0a7" GridPane.rowIndex="2" />
+                                                            <Label text="invalid files:" textFill="#8da0a7" GridPane.rowIndex="3" />
+                                                            <Label fx:id="txt_ok" text="-" textFill="#8da0a7" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <Label fx:id="txt_not" text="-" textFill="#8da0a7" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            <Label fx:id="txt_err" text="-" textFill="#8da0a7" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                            <HBox GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                                                               <children>
+                                                                  <Label text="Here you can classify and describe every single image for Yolo" textFill="#2b97b9" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                                     <font>
+                                                                        <Font name="System Italic" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="10.0" />
+                                                         </padding>
+                                                      </GridPane>
+                                                      <HBox spacing="10.0">
+                                                         <children>
+                                                            <Button fx:id="button_class" mnemonicParsing="false" onAction="#act_button_class" text="Classify images" />
+                                                            <Button mnemonicParsing="false" onAction="#act_button_hsv" text="Change HSV" />
+                                                         </children>
+                                                      </HBox>
+                                                      <ProgressBar fx:id="progress_image" maxHeight="-Infinity" maxWidth="748.0" minHeight="-Infinity" prefHeight="15.0" progress="0.0" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="6.0" />
+                                                         </VBox.margin>
+                                                      </ProgressBar>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Background images">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefWidth="388.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" layoutX="33.0" layoutY="211.0" spacing="10.0">
+                                                   <children>
+                                                      <Label layoutX="33.0" layoutY="215.0" text="Set path for background images" textFill="#bba279">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox spacing="10.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#act_button_festlegen_back" text="Select folder" />
+                                                      <Button fx:id="button_open_back" mnemonicParsing="false" onAction="#act_button_open_back" text="Open" />
+                                                      <VBox HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <TextField fx:id="txt_path_back" maxWidth="600.0" HBox.hgrow="ALWAYS" />
+                                                            <HBox spacing="5.0">
+                                                               <children>
+                                                                  <Label fx:id="txt_anz_back" text="0" textFill="#8da0a7" />
+                                                                  <Label text="images found" textFill="#8da0a7" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Hint: In the background filter setting, you can also specify a specific sub-folder or a completely different path with your pictures. This is only the default folder." textFill="#2b97b9" wrapText="true" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                           <VBox.margin>
+                              <Insets bottom="-10.0" left="-10.0" right="-10.0" top="-10.0" />
+                           </VBox.margin>
+                        </TabPane>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" />
+   </padding>
+</AnchorPane>
