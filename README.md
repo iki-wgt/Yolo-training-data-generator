@@ -2,6 +2,8 @@
 
 YOLO needs big amounts of test images to learn new object classes. This is very time-consuming and takes up the most time of the whole YOLO learning process. That's why the **YOLO-Train-Data-Generator** was built. It helps creating this data with minimal effort. By combining object images with backgrounds and additionally manipulating these by affine transformations and several filters you can artificially increase a few images to a large pile of images.
 
+This work was carried out as part of the scientific project for the master degree in the university [Hochschule Weingarten](http://www.rwu.de).
+
 
 ## How it works
 
